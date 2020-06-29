@@ -27,7 +27,7 @@ private MyAsynkTask myAsynkTask;
     public void onTaskBtnClick(View view) {
         myAsynkTask = new MyAsynkTask();
         myAsynkTask.execute();
-        Log.d(ONCLICK_TAG, "Метод завершен, нажатие на кнопку обработано " + Thread.currentThread().getName());
+        Log.d(ONCLICK_TAG, "Метод завершен, нажатие на кнопку обработано потоком " + Thread.currentThread().getName());
     }
 
 
@@ -35,9 +35,9 @@ private MyAsynkTask myAsynkTask;
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                for (int i = 0; i < 5; i++){
+                for (int i = 1; i < 6; i++){
                     TimeUnit.SECONDS.sleep(1);
-                    Log.d(ASYNC_TAG, "Это сообщение N" + i + "имя потока: " +Thread.currentThread().getName());
+                    Log.d(ASYNC_TAG, "Это сообщение N " + i + " имя потока: " +Thread.currentThread().getName());
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
