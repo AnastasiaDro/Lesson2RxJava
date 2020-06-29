@@ -1,4 +1,5 @@
 package com.trainings.lesson2rxjava.second;
 
-public class SecondPresenter {
+public interface Observer {
+    void update();
 }
