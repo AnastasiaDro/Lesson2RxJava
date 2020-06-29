@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lesson2RxJava</string>
+    <string name="taskStartBtn">Start AsynkTask</string>
 </resources>
