@@ -1,15 +1,26 @@
 package com.trainings.lesson2rxjava.second;
 
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Sender implements Observable{
+
+    private static final String TAG = "Sender";
 
     ArrayList <Observer> observersList;
 
     public Sender (){
         observersList = new ArrayList<>();
     }
+
+    public void sendSpam() {
+        Log.d(TAG, "Отправлен спам");
+        notifyObservers();
+    }
+
+
 
     @Override
     public void addObserver(Observer o) {
