@@ -20,24 +20,27 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/subscribeBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:onClick="onSubscribeClick"
                 android:text="@string/subscribe" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/unSubscribeBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:onClick="onUnsubscribeClick"
                 android:text="@string/unsubscribe" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/spamBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:onClick="onSpamClick"
                 android:text="@string/spam" />
         </TableRow>
 
