@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Lesson2RxJava</string>
     <string name="taskStartBtn">Start AsynkTask</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">unsubscribe</string>
+    <string name="spam">Spam</string>
 </resources>
