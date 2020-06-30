@@ -4,4 +4,6 @@
     <string name="startCount">Start count</string>
     <string name="stopCount">Stop count</string>
     <string name="spam">Spam</string>
+    <string name="counter">Счётчик</string>
+    <string name="lazy">Надоело считать :-P</string>
 </resources>

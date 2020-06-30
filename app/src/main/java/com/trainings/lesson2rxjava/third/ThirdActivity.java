@@ -22,18 +22,23 @@ public class ThirdActivity extends AppCompatActivity {
     private Observable <String> observable;
     private Disposable disposable;
     private TextView counterTV;
+    private TextView lazyTV;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+
         counterTV = findViewById(R.id.counterTV);
+        lazyTV = findViewById(R.id.lazyTV);
+
         thirdP = new ThirdPresenter();
-      //  observable = thirdP.
+        observable = thirdP.startCount();
     }
 
     public void onStartCountClick(View view) {
+        lazyTV.setVisibility(View.INVISIBLE);
         observable.observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
@@ -63,6 +68,7 @@ public class ThirdActivity extends AppCompatActivity {
 
     public void onStopCountClick(View view) {
         disposable.dispose();
+        lazyTV.setVisibility(View.VISIBLE);
     }
 
 

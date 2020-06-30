@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:onClick="onSubscribeClick"
-                android:text="@string/subscribe" />
+                android:text="@string/startCount" />
 
             <Button
                 android:id="@+id/unSubscribeBtn"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:onClick="onUnsubscribeClick"
-                android:text="@string/unsubscribe" />
+                android:text="@string/stopCount" />
 
             <Button
                 android:id="@+id/spamBtn"

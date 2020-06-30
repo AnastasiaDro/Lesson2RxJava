@@ -20,19 +20,19 @@ public class ThirdPresenter {
         Observable<String> observable = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                Log.d(TAG, "Начали счёт");
                 try {
+                    int i = 0;
                     while (true) {
-                        int i = 0;
                         TimeUnit.SECONDS.sleep(1);
                         String counterStr = "Счёт: " + i;
                         i++;
                         Log.d(TAG, "startCount поток " + Thread.currentThread().getName() + ": " + counterStr);
                         emitter.onNext(counterStr);
                     }
-
                    // emitter.onComplete();
                 } catch (InterruptedException e) {
-                    Log.d(TAG, "Не удалось подсчитать");
+                    Log.d(TAG, "Надоело считать");
                 }
             }
         }).subscribeOn(Schedulers.io());
